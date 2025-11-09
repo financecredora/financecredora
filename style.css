@@ -363,5 +363,43 @@ footer .tiny{
     padding: 10px;
   }
 }
+/* ============================
+   DM Button Fix (Desktop + Mobile)
+   ============================ */
+.dm-btn{
+  background:#25D366;
+  color:#fff;
+  padding:10px 14px;
+  border-radius:30px;
+  display:flex;
+  align-items:center;
+  gap:6px;
+  font-size:15px;
+  font-weight:600;
+  text-decoration:none;
+  box-shadow:0 4px 12px rgba(0,0,0,.15);
+  transition:0.2s;
+}
+
+.dm-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 6px 14px rgba(0,0,0,.18);
+}
+
+.dm-icon{
+  width:20px;
+  height:20px;
+}
+
+/* Mobile Fix: make button smaller & aligned */
+@media(max-width:768px){
+  .dm-btn{
+    font-size:14px;
+    padding:8px 12px;
+    align-self:flex-start;
+    margin-top:8px;
+  }
+}
+
 
 
