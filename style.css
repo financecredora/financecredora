@@ -6,80 +6,255 @@
   --radius:14px;
 }
 
-/* ===== Background: clearer + visible ===== */
+/* ===== Background: Maximum visibility (CRED style) ===== */
 body{
   font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial;
   margin:0;
-  /* BG image shows clearly and stays fixed */
   background:
-    linear-gradient(0deg, rgba(255,255,255,.25), rgba(255,255,255,.25)),
+    linear-gradient(0deg, rgba(255,255,255,.10), rgba(255,255,255,.10)),
     url("bg-financecredora.jpg") center top / cover fixed no-repeat;
   color:#0b1726;
   line-height:1.5;
 }
 
-/* Page container centered */
-.wrap{max-width:1100px;margin:28px auto;padding:18px}
+.wrap{
+  max-width:1100px;
+  margin:28px auto;
+  padding:18px;
+}
 
 /* ===== Header ===== */
-header{display:flex;align-items:center;justify-content:space-between;gap:12px}
-.brand{display:flex;align-items:center;gap:12px}
-.logo{width:60px;height:60px;border-radius:10px;display:flex;align-items:center;justify-content:center;background:transparent}
-.logo img{width:100%;height:100%;object-fit:contain}
-h1{margin:0;font-size:20px}
-.tiny{font-size:12px;color:var(--muted)}
+header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.logo{
+  width:60px;
+  height:60px;
+  border-radius:10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:transparent;
+}
+
+.logo img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+}
+
+h1{
+  margin:0;
+  font-size:20px;
+}
+
+.tiny{
+  font-size:12px;
+  color:var(--muted);
+}
+
 .btn{
-  background:var(--accent);color:#fff;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600;
+  background:var(--accent);
+  color:#fff;
+  padding:10px 14px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:600;
   box-shadow:0 6px 18px rgba(11,109,240,.15);
 }
 
-/* ===== Glass hero over background (text overlays BG) ===== */
+/* ===== HERO SECTION (CRED-style glass) ===== */
 .hero{
   margin-top:22px;
   border-radius:var(--radius);
   padding:28px;
-  display:flex;gap:24px;align-items:center;flex-wrap:wrap;
-  /* glass card */
-  background:rgba(255,255,255,.55);
-  backdrop-filter:blur(10px) saturate(110%);
-  -webkit-backdrop-filter:blur(10px) saturate(110%);
-  box-shadow:0 20px 40px rgba(0,0,0,.08);
+  display:flex;
+  gap:24px;
+  align-items:center;
+  flex-wrap:wrap;
+
+  /* 🔥 strongest background visibility mode */
+  background:rgba(255,255,255,.35);
+  backdrop-filter:blur(16px) saturate(150%);
+  -webkit-backdrop-filter:blur(16px) saturate(150%);
+
+  box-shadow:0 20px 50px rgba(0,0,0,.08);
 }
-.hero-left{flex:1;min-width:260px}
-.eyebrow{display:inline-block;padding:6px 10px;background:rgba(230,240,255,.9);color:var(--accent);border-radius:999px;font-weight:700;font-size:12px}
-h2{margin:12px 0 8px;font-size:30px;letter-spacing:.2px}
-.lead{color:#374151;margin-bottom:14px}
 
-.offer{display:flex;gap:12px;align-items:baseline;flex-wrap:wrap}
-.chip{background:rgba(255,255,255,.9);border-radius:10px;padding:10px 12px;font-weight:700;box-shadow:0 8px 18px rgba(0,0,0,.06)}
-.chip.important{border-left:4px solid #ff3b30}
+.hero-left{
+  flex:1;
+  min-width:260px;
+}
 
-.list{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:14px}
-.list div{background:rgba(255,255,255,.9);padding:12px;border-radius:10px;box-shadow:0 8px 18px rgba(0,0,0,.05);font-weight:600}
+.eyebrow{
+  display:inline-block;
+  padding:6px 10px;
+  background:rgba(255,255,255,.6);
+  color:var(--accent);
+  border-radius:999px;
+  font-weight:700;
+  font-size:12px;
+}
 
-.hero-right{width:320px;flex-shrink:0;display:flex;flex-direction:column;gap:12px;align-items:center}
-.poster{width:100%;border-radius:12px;overflow:hidden;box-shadow:0 12px 26px rgba(0,0,0,.10);background:rgba(255,255,255,.7)}
-.poster img{width:100%;height:auto;display:block}
+h2{
+  margin:12px 0 8px;
+  font-size:30px;
+  letter-spacing:.2px;
+}
 
-.info-row{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
-.info{background:rgba(255,255,255,.88);padding:12px;border-radius:10px;flex:1;min-width:220px;box-shadow:0 6px 16px rgba(0,0,0,.06)}
-.muted{color:#6b7280}
+.lead{
+  color:#374151;
+  margin-bottom:14px;
+}
 
-/* ===== Sections over BG, centered ===== */
-.divider{height:1px;background:linear-gradient(90deg,transparent,#e7e7e7,transparent);margin:24px 0;border-radius:2px}
-section > h3, section > h4{margin:0 0 10px 0}
-.mdr-grid{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
-.mdr-grid div{background:rgba(255,255,255,.9);padding:12px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,.05);min-width:160px}
+.offer{
+  display:flex;
+  gap:12px;
+  align-items:baseline;
+  flex-wrap:wrap;
+}
 
-/* Contact block */
-.address{color:#374151;font-size:13px;background:rgba(255,255,255,.7);display:inline-block;padding:10px 12px;border-radius:10px}
+.chip{
+  background:rgba(255,255,255,.9);
+  border-radius:10px;
+  padding:10px 12px;
+  font-weight:700;
+  box-shadow:0 8px 18px rgba(0,0,0,.06);
+}
 
-/* Footer centered and readable */
-footer{margin-top:22px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
-footer .tiny{background:rgba(255,255,255,.6);padding:6px 10px;border-radius:999px}
+.chip.important{
+  border-left:4px solid #ff3b30;
+}
 
-/* WhatsApp badge */
-.wh-badge{display:inline-flex;align-items:center;gap:8px;background:#25D366;color:#fff;padding:8px 10px;border-radius:999px;font-weight:700;text-decoration:none}
+.list{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
+  margin-top:14px;
+}
+
+.list div{
+  background:rgba(255,255,255,.85);
+  padding:12px;
+  border-radius:10px;
+  box-shadow:0 8px 18px rgba(0,0,0,.05);
+  font-weight:600;
+}
+
+.hero-right{
+  width:320px;
+  flex-shrink:0;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  align-items:center;
+}
+
+.poster{
+  width:100%;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 12px 26px rgba(0,0,0,.10);
+  background:rgba(255,255,255,.65);
+}
+
+.poster img{
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+.info-row{
+  display:flex;
+  gap:12px;
+  margin-top:18px;
+  flex-wrap:wrap;
+}
+
+.info{
+  background:rgba(255,255,255,.78);
+  padding:12px;
+  border-radius:10px;
+  flex:1;
+  min-width:220px;
+  box-shadow:0 6px 16px rgba(0,0,0,.06);
+}
+
+.muted{
+  color:#6b7280;
+}
+
+/* ===== Other Sections ===== */
+.divider{
+  height:1px;
+  background:linear-gradient(90deg,transparent,#e7e7e7,transparent);
+  margin:24px 0;
+  border-radius:2px;
+}
+
+.mdr-grid{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:8px;
+}
+
+.mdr-grid div{
+  background:rgba(255,255,255,.85);
+  padding:12px;
+  border-radius:10px;
+  box-shadow:0 6px 18px rgba(0,0,0,.05);
+  min-width:160px;
+}
+
+/* Contact Box */
+.address{
+  color:#374151;
+  font-size:13px;
+  background:rgba(255,255,255,.70);
+  display:inline-block;
+  padding:10px 12px;
+  border-radius:10px;
+}
+
+/* Footer */
+footer{
+  margin-top:22px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+footer .tiny{
+  background:rgba(255,255,255,.6);
+  padding:6px 10px;
+  border-radius:999px;
+}
+
+/* WhatsApp Badge */
+.wh-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background:#25D366;
+  color:#fff;
+  padding:8px 10px;
+  border-radius:999px;
+  font-weight:700;
+  text-decoration:none;
+}
 
 /* Responsive */
 @media (max-width:900px){
