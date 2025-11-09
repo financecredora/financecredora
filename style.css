@@ -12,7 +12,7 @@ body{
   margin:0;
   /* BG image shows clearly and stays fixed */
   background:
-    linear-gradient(0deg, rgba(255,255,255,.35), rgba(255,255,255,.35)),
+    linear-gradient(0deg, rgba(255,255,255,.25), rgba(255,255,255,.25)),
     url("bg-financecredora.jpg") center top / cover fixed no-repeat;
   color:#0b1726;
   line-height:1.5;
