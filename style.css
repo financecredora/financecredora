@@ -307,3 +307,18 @@ footer .tiny{
     grid-template-columns:1fr;
   }
 }
+.dev-badge{
+  position:fixed;
+  bottom:18px;
+  left:18px;
+  background:rgba(255,255,255,.55);
+  backdrop-filter:blur(8px);
+  padding:8px 14px;
+  border-radius:12px;
+  font-size:13px;
+  font-weight:600;
+  color:#333;
+  box-shadow:0 8px 20px rgba(0,0,0,.15);
+  z-index:9998;
+}
+
